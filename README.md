@@ -7,6 +7,9 @@ A comprehensive system for auditing and fixing situations where sections in a Fi
 ## Currenty Playbook
 
 ```bash
+# Ensure we download and inspect updated logs
+node main.js vv3EMActxg1pRD09Kfle --refresh
+
 # First, analyze the corruption timeline and put a date close to the date in which you diagnosed the problem
 node corruption_analysis.js vv3EMActxg1pRD09Kfle --date=2025-07-02
 
