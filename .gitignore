@@ -1,4 +1,7 @@
 *.json
 *.csv
 node_modules/
-*backup*
+*backup*.json
+_json/
+!package.json
+!package-lock.json
