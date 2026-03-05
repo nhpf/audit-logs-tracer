@@ -8,16 +8,22 @@ A comprehensive system for auditing and fixing situations where sections in a Fi
 
 ```bash
 # Ensure we download and inspect updated logs
-node main.js vv3EMActxg1pRD09Kfle --refresh
+node main.js Nf6JwjjIgY2iRDikub6y --refresh
 
 # First, analyze the corruption timeline and put a date close to the date in which you diagnosed the problem
-node corruption_analysis.js vv3EMActxg1pRD09Kfle --date=2025-07-02
+node corruption_analysis.js Nf6JwjjIgY2iRDikub6y --date=2026-03-04
+
+# Show exact section titles before/after each relevant event around the target date
+node corruption_analysis.js Nf6JwjjIgY2iRDikub6y --date=2026-03-04 --show-sections --max-section-names=200
+
+# List resulting section titles through the full history of structural section changes
+node corruption_analysis.js Nf6JwjjIgY2iRDikub6y --date=2026-03-04 --full-sections-timeline --max-section-names=200
 
 # Preview the intelligent recovery plan
-node intelligent_corruption_recovery.js vv3EMActxg1pRD09Kfle --corruption-date=<correct-date> --dry-run
+node intelligent_corruption_recovery.js Nf6JwjjIgY2iRDikub6y --corruption-date=<correct-date> --dry-run
 
 # Execute the recovery after reviewing the plan
-node intelligent_corruption_recovery.js vv3EMActxg1pRD09Kfle --corruption-date=<correct-date> --force
+node intelligent_corruption_recovery.js Nf6JwjjIgY2iRDikub6y --corruption-date=<correct-date> --force
 ```
 
 ---
